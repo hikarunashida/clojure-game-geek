@@ -39,9 +39,9 @@
   (let [entity-map* (partial entity-map cgg-data)
         games-map (entity-map* :games)
         designers-map (entity-map* :designers)]
-    {:query/game-by-id (partial resolve-game-by-id games-map)
-     :BoardGame/designers (partial resolve-board-game-designers designers-map)
-     :Designer/games (partial resolve-designer-games games-map)}))
+    {:query_game-by-id (partial resolve-game-by-id games-map)
+     :BoardGame_designers (partial resolve-board-game-designers designers-map)
+     :Designer_games (partial resolve-designer-games games-map)}))
 
 (defn load-schema
   []
