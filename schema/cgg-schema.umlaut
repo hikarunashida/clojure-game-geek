@@ -29,6 +29,7 @@ type Designer {
   name: String
   url: String? {
     @doc "Home page URL, if known."
+    @lang/spec validator url?
   }
   games: BoardGame[0..n] {
     @doc "Games designed by this designer."
