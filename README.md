@@ -17,11 +17,12 @@ cp cgg-schema.edn.example cgg-schema.edn
 $ lein repl
 ```
 
-and eval,
+Eval,
 
 ``` shell
 (start-server)
 ```
+and open http://localhost:8888/
 
 ## Option (wip)
 
