@@ -11,6 +11,6 @@ pom.xml.asc
 .hgignore
 .hg/
 .DS_Store
-/resources/*.edn
+/resources/cgg-schema.edn
 /graphviz
 /spec
