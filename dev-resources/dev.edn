@@ -1,0 +1,17 @@
+{:duct.core/environment :development
+ :duct.core/include ["resources/config"]
+
+ :clojure-game-geek.module/umlaut
+ {:umlaut-files-folder "schema"
+  :lacina {:output-file "resources/cgg-schema.edn"}
+  :dot {:output-folder "graphviz"}
+  :spec {:output-folder "spec"
+         :spec-package "clojure-game-geek.spec"
+         :custom-validators-filepath "clojure-game-geek.validators"
+         :id-namespace "clojure-game-geek"}}
+
+ :clojure-game-geek/schema
+ {:umlaut #ig/ref :clojure-game-geek.module/umlaut}
+
+ :clojure-gane-geek/pedestal
+ {:graphql true}}

@@ -1,6 +1,6 @@
-(ns user)
+#_(ns user)
 
-(defn dev
+#_(defn dev
   "Load and switch to the 'dev' namespace."
   []
   (require 'dev)

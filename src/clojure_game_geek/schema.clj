@@ -2,7 +2,8 @@
   (:require [clojure.java.io :as io]
             [com.walmartlabs.lacinia.util :as util]
             [com.walmartlabs.lacinia.schema :as schema]
-            [clojure.edn :as edn]))
+            [clojure.edn :as edn]
+            [integrant.core :as ig]))
 
 (def cgg-data
   (-> "cgg-data.edn"
@@ -50,4 +51,14 @@
       slurp
       edn/read-string
       (util/attach-resolvers (resolver-map))
+      schema/compile))
+
+;;;
+
+(defmethod ig/init-key :clojure-game-geek/schema [_ {:keys [schema-path resolvers]}]
+  (-> schema-path
+      io/resource
+      slurp
+      edn/read-string
+      (util/attach-resolvers resolvers)
       schema/compile))
