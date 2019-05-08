@@ -1,0 +1,15 @@
+{:duct.core/project-ns clojure-game-geek
+ :duct.core/environment :production
+
+ :clojure-game-geek/db
+ {:initial-data-path "dev-resources/cgg-data.edn"}
+
+ :clojure-game-geek/resolvers
+ {:db #ig/ref :clojure-game-geek/db}
+
+ :clojure-game-geek/schema
+ {:schema-path "resources/cgg-schema.edn"
+  :resolvers #ig/ref :clojure-game-geek/resolvers}
+
+ :clojure-game-geek/pedestal
+ {:schema #ig/ref :clojure-game-geek/schema}}
