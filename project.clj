@@ -4,8 +4,12 @@
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.10.0"]
+                 [com.walmartlabs/lacinia "0.33.0-alpha-3"]
                  [com.walmartlabs/lacinia-pedestal "0.11.0"]
                  [io.aviso/logging "0.3.2"]
-                 [umlaut "0.6.2"]]
-  :plugins [[lein-umlaut/lein-umlaut "0.5.3"]]
+                 [umlaut "0.6.2"]
+                 [duct/core "0.6.2"]]
+  :plugins [[lein-umlaut/lein-umlaut "0.5.3"]
+            [duct/lein-duct "0.12.0"]]
+  :resource-paths ["resources" "target/resources"]
   :repl-options {:init-ns user})
